@@ -5,30 +5,35 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/background_light"
-    tools:context=".ui.HomeFragment"> <com.google.android.material.appbar.AppBarLayout
-    android:id="@+id/appBarLayout_home"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+    tools:context=".ui.HomeFragment">
 
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar_home"
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout_home"
         android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
+        android:layout_height="wrap_content"
         android:background="?attr/colorPrimary"
-        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
-        app:title="@string/app_name" />
+        app:elevation="4dp">
 
-</com.google.android.material.appbar.AppBarLayout>
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar_home"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:title="@string/app_name"
+            app:menu="@menu/toolbar_menu" /> <!-- TAMBAHKAN INI -->
+    </com.google.android.material.appbar.AppBarLayout>
 
-    <androidx.cardview.widget.CardView
+    <com.google.android.material.card.MaterialCardView
         android:id="@+id/search_card_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/appBarLayout_home"
-        android:layout_margin="8dp"
-        app:cardCornerRadius="8dp"
-        app:cardElevation="4dp">
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="8dp"
+        app:cardCornerRadius="28dp"
+        app:cardElevation="2dp"
+        app:strokeWidth="0dp">
 
         <androidx.appcompat.widget.SearchView
             android:id="@+id/search_view"
@@ -36,39 +41,70 @@
             android:layout_height="wrap_content"
             android:background="@color/search_bar_background"
             app:iconifiedByDefault="false"
-            app:queryHint="@string/search_hint" />
-    </androidx.cardview.widget.CardView>
+            app:queryBackground="@android:color/transparent"
+            app:queryHint="@string/search_hint"
+            app:searchIcon="@drawable/ic_search_24" />
+    </com.google.android.material.card.MaterialCardView>
+
+    <HorizontalScrollView
+        android:id="@+id/horizontal_scroll_chip_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/search_card_view"
+        android:clipToPadding="false"
+        android:paddingStart="16dp"
+        android:paddingTop="8dp"
+        android:paddingEnd="16dp"
+        android:paddingBottom="8dp"
+        android:scrollbars="none">
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/chip_group_categories"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:chipSpacingHorizontal="8dp"
+            app:singleLine="true"
+            app:singleSelection="true" />
+    </HorizontalScrollView>
 
     <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
         android:id="@+id/swipe_refresh_layout_home"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/search_card_view">
+        android:layout_below="@id/horizontal_scroll_chip_group">
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recycler_view_home"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-
+            android:clipToPadding="false"
+            android:paddingTop="4dp"
+            android:paddingBottom="8dp"
             tools:listitem="@layout/list_item_news" />
-
     </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
-    <ProgressBar
-        android:id="@+id/progress_bar_home"
+
+    <LinearLayout
+        android:id="@+id/loading_indicator_layout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
         android:visibility="gone"
-        tools:visibility="visible" />
+        tools:visibility="visible">
 
-    <TextView
-        android:id="@+id/text_view_info_home"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:text="@string/no_news_found"
-        android:textSize="16sp"
-        android:visibility="gone"
-        tools:visibility="visible" />
+        <ProgressBar
+            android:id="@+id/progress_bar_home"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
 
+        <TextView
+            android:id="@+id/text_view_info_home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/loading_news"
+            android:textColor="@color/text_secondary" />
+    </LinearLayout>
 </RelativeLayout>
