@@ -57,7 +57,7 @@ Pastikan Anda telah menginstal:
 
 1.  **Clone repository ini**
     ```sh
-    git clone [https://github.com/Hamdi070705/NewsLite](https://github.com/Hamdi070705/NewsLite)
+    git clone https://github.com/Hamdi070705/NewsLite.git
     ```
 2.  **Buka proyek** di Android Studio.
 3.  Biarkan Gradle menyelesaikan sinkronisasi dan mengunduh semua dependensi yang diperlukan.
