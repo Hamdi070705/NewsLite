@@ -1,3 +1,45 @@
 <resources>
-    <string name="app_name">NewsLiteApp</string>
+    <string name="app_name">NewsLite</string>
+
+    <string name="title_home">Beranda</string>
+    <string name="title_saved">Tersimpan</string>
+
+    <string name="search_hint">Cari berita...</string>
+    <string name="label_berita_terkini">Berita Terkini</string>
+    <string name="error_failed_to_load_news">Gagal memuat berita. Silakan coba lagi.</string>
+    <string name="no_news_found">Tidak ada berita yang ditemukan.</string>
+    <string name="search_results_for">Hasil pencarian untuk: %s</string>
+
+    <string name="label_berita_tersimpan">Berita Tersimpan</string>
+    <string name="no_saved_news">Anda belum menyimpan berita apapun.</string>
+    <string name="news_removed_from_saved">Berita dihapus dari daftar simpanan.</string>
+    <string name="news_saved_successfully">Berita berhasil disimpan.</string>
+    <string name="failed_to_save_news">Gagal menyimpan berita.</string>
+    <string name="failed_to_remove_news">Gagal menghapus berita.</string>
+
+    <string name="sample_news_title">Judul Berita Contoh Panjang yang Mungkin Membutuhkan Beberapa Baris</string>
+    <string name="sample_news_description">Ini adalah deskripsi singkat dari berita. Deskripsi ini bisa sedikit lebih panjang untuk memberikan gambaran umum tentang isi berita.</string>
+    <string name="text_source_cnn_label">CNN Indonesia</string>
+    <string name="sample_news_date">20 Mei 2024</string>
+    <string name="action_save">Simpan</string>
+    <string name="action_unsave">Hapus Simpanan</string>
+    <string name="action_share">Bagikan</string>
+    <string name="action_open_in_browser">Buka di Browser</string>
+
+    <string name="cd_news_image">Gambar Berita</string>
+    <string name="cd_search_icon">Ikon Pencarian</string>
+    <string name="cd_clear_search">Hapus Pencarian</string>
+    <string name="cd_save_button">Tombol Simpan Berita</string>
+    <string name="cd_share_button">Tombol Bagikan Berita</string>
+
+    <string name="error_no_internet">Tidak ada koneksi internet.</string>
+    <string name="error_api_limit">Batas penggunaan API tercapai.</string>
+    <string name="error_unknown">Terjadi kesalahan yang tidak diketahui.</string>
+
+    <string name="action_read_full_story">Baca Selengkapnya</string>
+    <string name="title_activity_detail">Detail Berita</string>
+
+    <string name="loading_news_category">Memuat berita %s…</string>
+    <string name="loading_news">Memuat berita…</string>
+    <string name="error_database_unavailable">Database tidak tersedia. Silakan coba lagi nanti.</string>
 </resources>
