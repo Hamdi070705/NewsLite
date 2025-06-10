@@ -5,21 +5,23 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/background_light"
-    tools:context=".ui.SavedFragment"> <com.google.android.material.appbar.AppBarLayout
-    android:id="@+id/appBarLayout_saved"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+    tools:context=".ui.SavedFragment">
 
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar_saved"
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout_saved"
         android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
+        android:layout_height="wrap_content"
         android:background="?attr/colorPrimary"
-        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
-        app:title="@string/title_saved" />
+        app:elevation="4dp">
 
-</com.google.android.material.appbar.AppBarLayout>
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar_saved"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:title="@string/title_saved"
+            app:menu="@menu/toolbar_menu" /> <!-- TAMBAHKAN INI -->
+
+    </com.google.android.material.appbar.AppBarLayout>
 
     <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
         android:id="@+id/swipe_refresh_layout_saved"
@@ -31,17 +33,25 @@
             android:id="@+id/recycler_view_saved"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:padding="8dp"
+            android:paddingTop="8dp"
+            android:paddingStart="4dp"
+            android:paddingEnd="4dp"
+            android:clipToPadding="false"
             tools:listitem="@layout/list_item_news" />
 
     </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
     <TextView
         android:id="@+id/text_view_info_saved"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:gravity="center"
         android:text="@string/no_saved_news"
-        android:textSize="16sp"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
+        android:textColor="@color/text_secondary"
         android:visibility="gone"
         tools:visibility="visible" />
 
