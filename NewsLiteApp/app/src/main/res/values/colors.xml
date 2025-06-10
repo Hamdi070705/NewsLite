@@ -1,5 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- Palet Warna Utama (Modern Blue & Orange Accent) -->
+    <color name="colorPrimary">#1A237E</color> <!-- Biru Indigo Tua -->
+    <color name="colorPrimaryDark">#000051</color> <!-- Biru Indigo Sangat Tua -->
+    <color name="colorAccent">#FF9100</color> <!-- Oranye Terang sebagai Aksen -->
+
+    <!-- Warna Teks Standar -->
+    <color name="text_primary">#212121</color> <!-- Hitam Pekat untuk Judul/Teks Utama -->
+    <color name="text_secondary">#757575</color> <!-- Abu-abu untuk Deskripsi/Teks Sekunder -->
+    <color name="text_on_primary">#FFFFFF</color> <!-- Putih untuk teks di atas komponen berwarna primary (Toolbar, Tombol) -->
+
+    <!-- Warna Latar Belakang & UI -->
+    <color name="background_light">#F5F5F5</color> <!-- Latar Belakang Utama Aplikasi (Abu-abu Sangat Muda) -->
+    <color name="card_background">#FFFFFF</color> <!-- Latar Belakang untuk Card -->
+    <color name="search_bar_background">#FFFFFF</color> <!-- Latar Belakang untuk Search Bar di dalam Card -->
+    <color name="divider_color">#E0E0E0</color> <!-- Warna Garis Pemisah yang Halus -->
+    <color name="chip_background_default">#ECEFF1</color> <!-- Latar Belakang Chip Tidak Aktif -->
+    <color name="chip_text_default">#546E7A</color> <!-- Warna Teks Chip Tidak Aktif -->
+
+    <!-- Warna Standar (jika masih diperlukan) -->
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="light_gray">#F5F5F5</color>
+
+    <!-- Warna-warna dari file lama (dipertahankan untuk kompatibilitas jika masih dirujuk) -->
+    <color name="icon_tint_normal">@color/text_secondary</color>
+    <color name="icon_tint_selected">@color/colorPrimary</color>
+    <color name="text_primary_dark">@color/text_primary</color>
+    <color name="text_secondary_dark">@color/text_secondary</color>
+    <color name="text_tertiary_dark">#9E9E9E</color>
+    <color name="button_outline_default">#E0E0E0</color>
 </resources>
