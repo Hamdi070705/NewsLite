@@ -157,10 +157,10 @@ public class HomeFragment extends Fragment implements NewsAdapter.OnArticleInter
             MenuItem darkModeItem = menu.findItem(R.id.action_dark_mode);
             if (darkModeItem != null) {
                 if (isDarkMode) {
-                    darkModeItem.setIcon(R.drawable.ic_dark_mode_24);
+                    darkModeItem.setIcon(R.drawable.ic_light_mode_24);
                     darkModeItem.setTitle("Light Mode");
                 } else {
-                    darkModeItem.setIcon(R.drawable.ic_light_mode_24);
+                    darkModeItem.setIcon(R.drawable.ic_dark_mode_24);
                     darkModeItem.setTitle("Dark Mode");
                 }
             }
@@ -176,9 +176,6 @@ public class HomeFragment extends Fragment implements NewsAdapter.OnArticleInter
 
                 // This will trigger onPrepareOptionsMenu to update the icon
                 getActivity().invalidateOptionsMenu();
-
-                // Show loading and reload news when switching dark mode
-                loadNewsDataForCategory(currentSelectedCategory);
 
                 return true;
             }
@@ -557,4 +554,3 @@ public class HomeFragment extends Fragment implements NewsAdapter.OnArticleInter
         chipGroupCategories = null;
     }
 }
-
